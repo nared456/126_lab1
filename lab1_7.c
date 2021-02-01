@@ -2,16 +2,24 @@
 int main()
 {
     float time;
-    int a;
+    int a,b;
     scanf("%f",&time);
     a = (int)time;
-    if(a>=0 && a<=11)
+    if(time>=0 && time<=23.59)
     {
-        printf("%.2f a.m.",time);
-    }
-    else if(a>=12 && a<=23)
+        if(a>=0 && a<=23 && b>=0 && b<=59)
     {
-        printf("%.2f p.m.",time);
+        printf("%.2f ",time);
+        if(a>=0 && a<=11)
+        {
+            printf("a.m.");
+        }
+        else if(a>=12 && a<=23)
+        {
+            printf("p.m.");
+        }
     }
+    }
+
     return 0;
 }
