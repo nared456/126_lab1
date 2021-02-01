@@ -16,6 +16,11 @@ int main()
             max = a[i];
             lo = i;
         }
+        if(a[i]==a[i+1])
+        {
+            lo = i;
+            break;
+        }
     }
     printf("%d %d",lo,max);
 }
